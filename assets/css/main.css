@@ -9,6 +9,8 @@
 
 /* Reset */
 
+
+	
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -17,6 +19,7 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
+
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -874,6 +877,33 @@
 			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25)), linear-gradient(0deg, rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125));
 			background-size: 128px 128px, auto, auto;
 		}
+
+
+
+		.image.filteredbl:after {
+			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(12, 12, 12, 0.25) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(39, 32, 19, 0.25));
+			background-size: 128px 128px, auto;
+			-moz-pointer-events: none;
+			-webkit-pointer-events: none;
+			-ms-pointer-events: none;
+			pointer-events: none;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			z-index: 1;
+		}
+
+		.image.filteredbl.tinted:after {
+			background-image: url("../../images/overlay.png"), linear-gradient(60deg, rgba(207, 189, 189, 0.125) 25%, rgba(0, 0, 0, 0.125) 50%, rgba(19, 18, 17, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+			background-size: 128px 128px, auto, auto;
+		}
+
+
+
 
 		.image[data-position] img {
 			-moz-object-fit: cover;
