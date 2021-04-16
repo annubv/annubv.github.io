@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
-
-const CustomDiv = styled.div``;
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -10,7 +9,7 @@ export default function Home() {
         <title>Anubhav</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CustomDiv>Hello!</CustomDiv>
+      <Navbar />
     </div>
   );
 }
