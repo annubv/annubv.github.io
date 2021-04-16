@@ -1,7 +1,21 @@
-import '../styles/globals.css'
+import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme, GlobalStyles } from "../styles/themeConfig";
+import "../styles/reset.css";
+import "../styles/global.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) => {
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
 
-export default MyApp
+  return (
+    <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
+
+export default MyApp;
