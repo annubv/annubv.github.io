@@ -14,7 +14,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("../public/fonts/PlusJakartaSans/PlusJakartaSans-Bold.ttf");
+  font-style: bold;
+  font-weight: 600;
+  font-display: swap;
+}
+
 html,
-body {
+body,
+button {
   font-family: "PlusJakartaSans";
 }

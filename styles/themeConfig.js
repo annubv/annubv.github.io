@@ -2,23 +2,35 @@ import { createGlobalStyle } from "styled-components";
 
 export const lightTheme = {
   body: "#FFFFFF",
-  text: "#363537",
-  toggleBorder: "#FFF",
-  background: "#363537",
-  border: "#F4F7FB",
+  text: {
+    primary: "#363537",
+    secondary: "#FAFAFA",
+  },
+  border: {
+    primary: "#F4F7FB",
+  },
+  button: {
+    primary: "#000000",
+  },
 };
 
 export const darkTheme = {
   body: "#000000",
-  text: "#FAFAFA",
-  toggleBorder: "#6B8096",
-  background: "#999",
-  border: "#20252B",
+  text: {
+    primary: "#FAFAFA",
+    secondary: "#363537",
+  },
+  border: {
+    primary: "#20252B",
+  },
+  button: {
+    primary: "#FFFFFF",
+  },
 };
 
 export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.text.primary};
   }
 `;

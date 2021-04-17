@@ -21,18 +21,18 @@ const MailSection = styled.div`
 const MailButton = styled.a`
   padding: 0.6rem 0.8rem 0.5rem 0.8rem;
   background: none;
-  border: 2px solid ${(props) => props.theme.border};
+  border: 2px solid ${(props) => props.theme.border.primary};
   border-radius: 40% 50% 50% 50%;
   margin-right: 0.5rem;
 `;
 
 const IconContainer = styled.div`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.text.primary};
 `;
 
 const MailText = styled.a`
   text-decoration: none;
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.text.primary};
   font-family: "PlusJakartaSans";
   font-weight: 500;
 `;
