@@ -1,6 +1,11 @@
 import styled from "styled-components";
-import MailIcon from "../../common/icons/MailIcon";
-import { CONTACT_EMAIL } from "../../constants/contactDetails";
+import GithubIcon from "../../common/icons/GithubIcon";
+//import MailIcon from "../../common/icons/MailIcon";
+import {
+  CONTACT_EMAIL,
+  GITHUB_LINK,
+  GITHUB_UNAME,
+} from "../../constants/contactDetails";
 
 const NavbarWrapper = styled.div`
   padding: 2rem 1.8rem;
@@ -37,21 +42,17 @@ const Navbar = () => {
     <NavbarWrapper>
       <MailSection>
         <MailButton
-          href={`mailto:${CONTACT_EMAIL}`}
+          href={GITHUB_LINK}
           target="_blank"
           rel="noopener noreferrer"
         >
           <IconContainer>
-            <MailIcon />
+            <GithubIcon />
           </IconContainer>
         </MailButton>
 
-        <MailText
-          href={`mailto:${CONTACT_EMAIL}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {CONTACT_EMAIL}
+        <MailText href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
+          {GITHUB_UNAME}
         </MailText>
       </MailSection>
     </NavbarWrapper>
