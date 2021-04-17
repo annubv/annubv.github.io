@@ -1,2 +1,1 @@
-export const PHONE_MEDIA = `@media only screen and (max-width: 1250px)`;
-export const PAD_MEDIA = `@media only screen and (max-width: 1024px)`;
+export const DESKTOP_MEDIA = "@media only screen and (min-width: 1024px)";

@@ -26,4 +26,5 @@ html,
 body,
 button {
   font-family: "PlusJakartaSans";
+  transition: color 0.5s ease, background-color 0.5s ease;
 }

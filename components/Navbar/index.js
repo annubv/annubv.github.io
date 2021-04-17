@@ -1,11 +1,7 @@
 import styled from "styled-components";
 import GithubIcon from "../../common/icons/GithubIcon";
-//import MailIcon from "../../common/icons/MailIcon";
-import {
-  CONTACT_EMAIL,
-  GITHUB_LINK,
-  GITHUB_UNAME,
-} from "../../constants/contactDetails";
+import { GITHUB_LINK, GITHUB_UNAME } from "../../constants/contactDetails";
+import ThemeToggleButton from "../ThemeToggleButton";
 
 const NavbarWrapper = styled.div`
   padding: 2rem 1.8rem;
@@ -37,7 +33,7 @@ const MailText = styled.a`
   font-weight: 500;
 `;
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, currentTheme }) => {
   return (
     <NavbarWrapper>
       <MailSection>
@@ -50,11 +46,14 @@ const Navbar = () => {
             <GithubIcon />
           </IconContainer>
         </MailButton>
-
         <MailText href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
           {GITHUB_UNAME}
         </MailText>
       </MailSection>
+      <ThemeToggleButton
+        toggleTheme={toggleTheme}
+        currentTheme={currentTheme}
+      />
     </NavbarWrapper>
   );
 };

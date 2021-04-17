@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PROFILE_PIC } from "../../constants/contactDetails";
+import { DESKTOP_MEDIA } from "../../styles/mediaConfig";
 import Avatar from "../Avatar";
 
 const HeroSectionWrapper = styled.div`
@@ -15,19 +16,29 @@ const IntroText = styled.p`
   font-size: 1.3rem;
   text-align: center;
 `;
+
 const HeadText = styled.h1`
   margin: 2.3rem 0;
   text-align: center;
   font-size: 2.3rem;
   font-weight: 500;
   line-height: 2.7rem;
+  ${DESKTOP_MEDIA} {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    max-width: 600px;
+  }
 `;
+
 const ExitText = styled.p`
   text-align: center;
   font-size: 1rem;
   line-height: 2rem;
   span {
     font-weight: 500;
+  }
+  ${DESKTOP_MEDIA} {
+    max-width: 350px;
   }
 `;
 
