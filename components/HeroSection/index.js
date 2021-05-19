@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PROFILE_PIC } from "../../constants/contactDetails";
+import { LINKEDIN_PROFILE, PROFILE_PIC } from "../../constants/contactDetails";
 import { DESKTOP_MEDIA } from "../../styles/mediaConfig";
 import Avatar from "../Avatar";
 
@@ -47,23 +47,37 @@ const CtaButton = styled.button`
   padding: 1.5rem 2.5rem;
   background: ${(props) => props.theme.button.primary};
   color: ${(props) => props.theme.text.secondary};
-  border: none;
+  border: 1px solid ${(props) => props.theme.button.primary};
   border-radius: 2rem;
   font-size: 0.8rem;
   font-weight: 500;
+
+  &:hover {
+    background: ${(props) => props.theme.text.secondary};
+    color: ${(props) => props.theme.button.primary};
+  }
 `;
 
 const HeroSection = () => {
+  function onClickCta() {
+    const newWindow = window.open(
+      LINKEDIN_PROFILE,
+      "_blank",
+      "noopener,noreferrer"
+    );
+    if (newWindow) newWindow.opener = null;
+  }
+
   return (
     <HeroSectionWrapper>
       <Avatar avatarImage={PROFILE_PIC} />
       <IntroText>Hi, I'm Anubhav 🤟</IntroText>
       <HeadText>Building digital products and experience.</HeadText>
       <ExitText>
-        a <span>Product Designer</span> and <span>Visual Developer</span> in SF.
-        I specialize in UI/UX Design, Responsive Web, Design and all that stuff.
+        a <span>Fullstack Developer</span> and in India. I specialize in
+        building Responsive Web Design.
       </ExitText>
-      <CtaButton>CONNECT WITH ME</CtaButton>
+      <CtaButton onClick={onClickCta}>CONNECT WITH ME</CtaButton>
     </HeroSectionWrapper>
   );
 };
