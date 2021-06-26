@@ -9,6 +9,7 @@ const ThemeToggleButtonWrapper = styled.div`
 const ThemeToggleButton = ({ toggleTheme, currentTheme }) => (
   <ThemeToggleButtonWrapper onClick={toggleTheme}>
     <input
+      readOnly
       type="checkbox"
       id="theme-toggle-btn-hide-checkbox"
       checked={currentTheme === "light"}
