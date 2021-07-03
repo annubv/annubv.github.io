@@ -74,8 +74,8 @@ const HeroSection = () => {
       <IntroText>Hi, I'm Anubhav 🤟</IntroText>
       <HeadText>Building digital products and experience.</HeadText>
       <ExitText>
-        a <span>Fullstack Developer</span> and in India. I specialize in
-        building Responsive Web Design.
+        a <span>Fullstack Developer</span> based in India, specialized in
+        building Responsive Web Apps.
       </ExitText>
       <CtaButton onClick={onClickCta}>CONNECT WITH ME</CtaButton>
     </HeroSectionWrapper>
